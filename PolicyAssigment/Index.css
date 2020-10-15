@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 100%);
+  overflow-x: hidden;
+}
+
+/* Header Style Start */
+
+.wrapper header {
+  width: 100%;
+  height: 10vh;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 250ms ease-in-out;
+  border-bottom: 1px solid grey;
+}
+
+header img {
+  width: 80px;
+  height: 100%;
+  border-radius: 19px;
+  object-fit: contain;
+}
+.hambarger {
+  cursor: pointer;
+}
+
+.hambarger div {
+  width: 2.8rem;
+  height: 0.3rem;
+  margin: 0.2rem;
+  line-height: 0.5rem;
+  background-color: #000000;
+  border-radius: 2px;
+  pointer-events: none;
+  transition: all 250ms ease-in-out;
+}
+
+.white {
+  background-color: white;
+}
+
+.wrapper nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  clip-path: circle(50px at 100%-10%);
+  transition: all 500ms ease-in-out;
+  overflow: auto;
+}
+
+.showNav {
+  clip-path: circle(100%) !important;
+}
+
+.wrapper nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  transform: translateY(10%);
+}
+
+.wrapper nav ul li {
+  min-height: 40px;
+  margin: 0.2rem 0rem;
+}
+
+.wrapper nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  transition: all 250ms ease-in-out;
+}
+.wrapper nav ul li i {
+  font-size: 30px;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.wrapper nav ul li :hover {
+  font-size: 22px;
+  color: rgb(218, 214, 214);
+}
+
+.stickyHeader {
+  position: fixed;
+  top: 0;
+  background-color: rgb(54, 52, 52);
+  z-index: 1;
+}
+
+/* Header Style End */
+
+/* Main content Style Start */
+
+/* tagHeading style start */
+
+main {
+  width: calc(100% - 1.5rem);
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+main .tagHeading {
+  margin: auto;
+  width: 95%;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+main .tagHeading h1 {
+  margin-bottom: 0.5rem;
+  font-size: 25pxpx;
+  color: rgb(22, 136, 212);
+}
+main .tagHeading small {
+  color: rgb(163, 159, 159);
+}
+
+main .tagHeading p {
+  margin-top: 0.5rem;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(124, 122, 122);
+}
+
+/* tagHeading style End */
+
+/* Policy Form style start */
+
+.policyFormSection {
+  margin: 1rem auto;
+  width: calc(90% - 1rem);
+  padding: 1rem;
+  border: 0.5px solid rgb(207, 207, 207);
+  border-radius: 8px;
+}
+
+.policyFormSection input[type='text'] {
+  width: calc(100% - 2rem);
+  height: 40px;
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 8px;
+  padding: 0.2rem 1rem;
+  font-size: 18px;
+  margin: 0.5rem 0rem;
+}
+
+.policyFormSection .policyFormHeading {
+  width: calc(100% - 2rem);
+  height: 60px;
+  border-radius: 6px;
+  padding: 0.2rem 1rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgb(232, 233, 232);
+}
+
+.policyFormSection .policyFormHeading h1 {
+  flex: 1;
+  font-size: 20px;
+  pointer-events: none;
+}
+.policyFormSection .policyFormHeading i {
+  font-size: 24px;
+  pointer-events: none;
+}
+.policyFormSection .policyForm {
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  height: 0;
+  overflow: hidden;
+  transition: all 400ms ease-in-out;
+}
+.policyForm form .form {
+  margin-top: 0.5rem;
+}
+
+.policyForm form .form input[type='submit'] {
+  min-width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  padding: 0.2rem;
+  font-size: 18px;
+  background-color: rgb(232, 233, 232);
+  cursor: pointer;
+}
+
+.showCurrentForm {
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: auto !important;
+}
+/* Policy Form style End */
+
+/* Ratting Form style Start */
+.rattingHeading {
+  transform: translateY(3rem);
+  margin-bottom: 2rem !important;
+}
+
+.commentContainer {
+  padding: 1rem;
+  transform: translateY(3rem);
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-height: 500px;
+}
+.questionSection,
+.commentSection {
+  padding: 0.5rem;
+  width: calc(100% - 1rem);
+  max-height: 500px;
+  overflow: scroll;
+  transition: all 250ms ease-in-out;
+}
+.questionSection h1 {
+  margin: 0rem 0rem 0.8rem 0;
+  font-size: 30px;
+}
+
+.questionSection .question {
+  background-color: rgb(232, 233, 232);
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  margin: 0.5rem 0rem;
+}
+
+.questionSection .question h3 {
+  margin: 0.5rem 0rem;
+  color: rgb(22, 136, 212);
+}
+
+.questionSection .question p {
+  line-height: 25px;
+  margin: 0.8rem 0rem;
+}
+
+.questionSection .question ul {
+  list-style: none;
+}
+.questionSection .question ul li {
+  margin: 0.5rem 0rem;
+}
+
+.questionSection .question ul li a {
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+}
+.commentSection {
+  margin-bottom: 0.5rem;
+}
+.commentSection h1 {
+  margin: 0rem 0rem 0.8rem 0;
+  font-size: 30px;
+}
+
+.commentSection .comment {
+  background-color: rgb(232, 233, 233);
+  padding: 0.5rem 0.8rem;
+  width: calc(90% - 1.6rem);
+  border-radius: 8px;
+  margin: 0.5rem 0rem;
+}
+
+.commentSection .comment .user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.8rem 0rem;
+}
+.commentSection .comment .user p {
+  line-height: 20px;
+  font-size: 20px;
+}
+.commentSection .comment .user .userName {
+  color: rgb(95, 94, 94);
+  font-weight: 300;
+}
+.commentSection .comment .user .userCompany {
+  color: rgb(22, 136, 212);
+}
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+/* Footer Start */
+
+footer {
+  position: absolute;
+  padding: 1rem;
+  width: 100%;
+  min-height: 10vh;
+  background-color: black;
+}
+
+footer h1,
+footer p {
+  text-align: center;
+  color: white;
+}
+
+@media screen and (min-width: 700px) {
+  .wrapper header {
+    width: calc(100% - 3rem);
+    padding: 0rem 3rem 0rem 1.5rem;
+  }
+  .wrapper nav {
+    padding: 1rem;
+  }
+  main .tagHeading {
+    width: 40%;
+  }
+  main .tagHeading h1 {
+    font-size: 35px;
+  }
+  .policyFormSection {
+    width: calc(80% - 1rem);
+    margin: 3rem auto 1rem auto;
+  }
+  .rattingHeading {
+    width: 60% !important;
+  }
+  .commentContainer {
+    grid-template-columns: 70% 30%;
+  }
+  .questionSection {
+    border-right: 1px solid black;
+  }
+}
